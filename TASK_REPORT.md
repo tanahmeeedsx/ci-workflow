@@ -14,15 +14,16 @@ Create a basic GitHub Actions Continuous Integration (CI) workflow that automati
 | Configure the `pull_request` trigger | Completed | Targets the `main` branch |
 | Add at least one validation step | Completed | Bash syntax check, validation script, and README check |
 | Push the workflow to GitHub | Completed | Changes committed to `main` |
-| Verify a successful workflow run | Completed for the existing CI workflow; the newly added workflow must be confirmed by its own run | See Actions run links below |
-| Capture a successful run screenshot | Pending manual capture | Save a screenshot of the successful run and include it with the task submission |
+| Verify a successful run for the new workflow | Completed | Run `41486673374` — success |
+| Verify the original workflow remains separate | Completed | Run `41486673258` — success |
+| Capture a successful run screenshot | Pending manual capture | Screenshot still needs to be saved and attached to the task submission |
 
 ## Workflow Details
 
 The repository contains two separate workflows:
 
-1. **Basic CI Workflow** — `.github/workflows/ci.yml` (original workflow name retained)
-2. **GitHub Actions CI Workflow** — `.github/workflows/github-actions-ci.yml` (new workflow requested for this task)
+1. **Basic CI Workflow** — `.github/workflows/ci.yml` (original name retained)
+2. **GitHub Actions CI Workflow** — `.github/workflows/github-actions-ci.yml` (new workflow)
 
 Both workflows are configured for `push`, `pull_request`, and manual `workflow_dispatch` events on `main`.
 
@@ -37,9 +38,10 @@ Both workflows are configured for `push`, `pull_request`, and manual `workflow_d
 
 - Repository: https://github.com/tanahmeeedsx/ci-workflow
 - GitHub Actions: https://github.com/tanahmeeedsx/ci-workflow/actions
-- Previously verified successful run: https://github.com/tanahmeeedsx/ci-workflow/actions/runs/41486293373
+- New workflow successful run: https://github.com/tanahmeeedsx/ci-workflow/actions/runs/41486673374
+- Original workflow successful run: https://github.com/tanahmeeedsx/ci-workflow/actions/runs/41486673258
 
-**Verification note:** Run `41486293373` completed successfully, and all listed job steps passed. GitHub reported that run against `.github/workflows/ci.yml`, so it does not by itself prove that the newly added `.github/workflows/github-actions-ci.yml` has executed. Confirm a successful run for the new workflow before marking that specific verification complete.
+Both verified runs completed with a successful conclusion. All validation steps in the new workflow passed.
 
 ## Final Submission Checklist
 
@@ -48,5 +50,6 @@ Both workflows are configured for `push`, `pull_request`, and manual `workflow_d
 - [x] Push and pull request triggers configured
 - [x] Automated validation steps added
 - [x] Changes pushed to GitHub
-- [ ] Confirm a successful run for `GitHub Actions CI Workflow`
+- [x] New workflow run verified successfully
+- [x] Original workflow kept separate and verified
 - [ ] Capture and submit the successful run screenshot
