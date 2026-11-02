@@ -32,6 +32,12 @@ Both workflows run on pushes and pull requests targeting `main`, and can also be
 
 The workflows check Bash syntax, execute `scripts/validate.sh`, and verify that `README.md` is not empty. The validation script also checks that the expected project heading exists.
 
+## Workflow Screenshot
+
+The following screenshot shows a successful GitHub Actions CI workflow execution.
+
+![GitHub Actions CI Workflow Success](screenshots/ci-workflow-success.png)
+
 ## Learning Outcomes
 
 - Understand event-driven CI automation.
@@ -49,6 +55,8 @@ ci-workflow/
 │       └── github-actions-ci.yml
 ├── scripts/
 │   └── validate.sh
+├── screenshots/
+│   └── ci-workflow-success.png
 ├── README.md
 └── TASK_REPORT.md
 ```
