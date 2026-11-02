@@ -1,14 +1,14 @@
 # Basic GitHub Actions CI Workflow
 
-A beginner-friendly DevOps project that demonstrates Continuous Integration (CI) using GitHub Actions. The workflow automatically runs basic repository validation whenever code is pushed to the `main` branch or a pull request targets it.
+A beginner-friendly DevOps project demonstrating Continuous Integration (CI) with GitHub Actions. Automated validation runs when changes are pushed to `main` or a pull request targets `main`.
 
 ## Overview
 
-This project introduces the fundamentals of CI by automating a lightweight validation process directly in GitHub.
+This project introduces event-driven CI automation through lightweight repository checks on GitHub-hosted runners.
 
 ## What This Project Covers
 
-- Understanding Continuous Integration and CI/CD fundamentals
+- Understanding Continuous Integration fundamentals
 - Creating and managing GitHub Actions workflows
 - Configuring `push` and `pull_request` triggers
 - Running automated shell-based validation
@@ -21,17 +21,16 @@ This project introduces the fundamentals of CI by automating a lightweight valid
 - YAML
 - Bash
 
-## Workflow
+## Workflows
 
-1. A developer pushes changes to `main` or opens a pull request targeting `main`.
-2. GitHub Actions starts the CI workflow.
-3. The runner checks out the repository.
-4. The workflow runs the validation script.
-5. The job reports success or failure.
+- `Basic CI Workflow` — `.github/workflows/ci.yml`
+- `GitHub Actions CI Workflow` — `.github/workflows/github-actions-ci.yml`
+
+Both workflows run on pushes and pull requests targeting `main`, and can also be started manually using `workflow_dispatch`.
 
 ## Validation
 
-The validation script checks that the project README exists and contains the expected project heading.
+The workflows check Bash syntax, execute `scripts/validate.sh`, and verify that `README.md` is not empty. The validation script also checks that the expected project heading exists.
 
 ## Learning Outcomes
 
@@ -46,10 +45,12 @@ The validation script checks that the project README exists and contains the exp
 ci-workflow/
 ├── .github/
 │   └── workflows/
-│       └── ci.yml
+│       ├── ci.yml
+│       └── github-actions-ci.yml
 ├── scripts/
 │   └── validate.sh
-└── README.md
+├── README.md
+└── TASK_REPORT.md
 ```
 
 ## Future Improvements
