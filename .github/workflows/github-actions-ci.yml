@@ -1,0 +1,28 @@
+name: GitHub Actions CI Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: CI Validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v7
+      - name: Check Bash Syntax
+        run: bash -n scripts/validate.sh
+      - name: Run Repository Validation
+        run: bash scripts/validate.sh
+      - name: Verify README
+        run: test -s README.md
