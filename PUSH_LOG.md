@@ -15,3 +15,4 @@ This file records the 20 sequential commits pushed to `main` for the CI workflow
 | 10 | Record the main-branch push checkpoint. |
 | 11 | Record the GitHub Actions execution checkpoint. |
 | 12 | Record the CI history checkpoint. |
+| 13 | Record the workflow monitoring checkpoint. |
