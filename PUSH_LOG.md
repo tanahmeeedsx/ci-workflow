@@ -10,3 +10,4 @@ This file records the 20 sequential commits pushed to `main` for the CI workflow
 | 5 | Record the documentation validation checkpoint. |
 | 6 | Record the CI automation checkpoint. |
 | 7 | Record the Bash validation checkpoint. |
+| 8 | Record the README verification checkpoint. |
