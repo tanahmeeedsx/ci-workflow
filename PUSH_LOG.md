@@ -19,3 +19,4 @@ This file records the 20 sequential commits pushed to `main` for the CI workflow
 | 14 | Record the repository quality checkpoint. |
 | 15 | Record the validation pipeline checkpoint. |
 | 16 | Record the workflow documentation checkpoint. |
+| 17 | Record the CI learning exercise checkpoint. |
