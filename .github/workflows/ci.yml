@@ -32,3 +32,6 @@ jobs:
 
       - name: Verify README
         run: test -s README.md
+
+      - name: Verify Workflow Screenshot
+        run: test -s screenshots/ci-workflow-success.png
